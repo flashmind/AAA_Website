@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116232003) do
+ActiveRecord::Schema.define(version: 20150117175624) do
+
+  create_table "comments", force: true do |t|
+    t.integer  "event_id"
+    t.text     "details"
+    t.string   "author"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", force: true do |t|
     t.string   "title"
